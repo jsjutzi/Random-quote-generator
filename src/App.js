@@ -1,18 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+
+
 class App extends Component {
+  // constructor{
+  //   this.state={
+  //     quote: this.state.quote,
+  //     author: this.state.author,
+  //     category: this.state.category
+  //   }
+  //   changeQuote(){
+
+  //   }
+  //   changeColor(){
+
+  //   }
+  // }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div id="main-container">
+          <div id="quote-box">
+            <p id="quote-text">"The definition of insanity is doing the same thing repeatedly and expecting a different result"</p>
+            <div id="author-name">
+            <p id="author-text">Albert Einstein</p>
+              <div id="button-box">
+                <button type="button" className="button-color" id="save-button">Save</button>
+                <button type="button" className="button-color" id="tweet-button">Tweet</button>
+                <button type="button" className="button-color" id="new-quote-button">New Quote</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

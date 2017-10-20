@@ -1,28 +1,55 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Merriweather');
+body{
+  height: 768px;
+  width: 100%;
+  background-color:   #3a82f4;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Fjalla One', sans-serif;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#main-container{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-width: 500px;
+  max-width: 600px;
+  min-height: 320px;
+  max-height: 600px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 50px;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+#quote-text{
+  margin-left: 20px;
+  padding: 30px;
+  font-size: 1.2em;
+}
+#author-text{
+  margin-left: 400px;
+}
+.button-color{
+  margin-top: 80px;
   color: white;
+  background-color: #3a82f4;
+  font-weight: bold;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: .15em;
 }
-
-.App-title {
-  font-size: 1.5em;
+#save-button{
+  margin-left: 50px;
+  height: 40px;
+  width: 100px;
+  border-radius: 500px;
 }
-
-.App-intro {
-  font-size: large;
+#tweet-button{
+  height: 40px;
+  width: 100px;
+  margin-left: 40px;
+  border-radius: 500px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#new-quote-button{
+  margin-left: 150px;
+  height: 40px;
+  width: 100px;
+  border-radius: 500px;
 }
