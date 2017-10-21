@@ -14,7 +14,7 @@ body{
   min-width: 500px;
   max-width: 600px;
   min-height: 320px;
-  max-height: 600px;
+  max-height: 700px;
   margin: auto;
   margin-top: 100px;
   border-radius: 50px;
@@ -22,7 +22,7 @@ body{
 #quote-text{
   margin-left: 20px;
   padding: 30px;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 #author-text{
   margin-left: 400px;
@@ -34,6 +34,7 @@ body{
   font-weight: bold;
   font-family: 'Fjalla One', sans-serif;
   letter-spacing: .15em;
+  margin-bottom: 20px;
 }
 #save-button{
   margin-left: 50px;
