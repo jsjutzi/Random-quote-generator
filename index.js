@@ -15,7 +15,6 @@ app.use(json());
 //Get quote info from API
 
 app.get('/api/getQuote', function(req, res){
-    console.log('server')
     axios.get('http://quotes.stormconsultancy.co.uk/random.json').then(response =>{
         return res.send(response.data)
     }).catch(console.log)

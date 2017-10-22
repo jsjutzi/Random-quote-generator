@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Merriweather');
 body{
-  height: 768px;
+  /* height: 768px;
   width: 100%;
-  background-color:   #3a82f4;
+  background-color:   #3a82f4; */
   display: flex;
   flex-direction: column;
   font-family: 'Fjalla One', sans-serif;
+  overflow: hidden;
+  
 }
+
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+}
+
 #main-container{
   display: flex;
   flex-direction: column;
@@ -16,7 +26,7 @@ body{
   min-height: 320px;
   max-height: 700px;
   margin: auto;
-  margin-top: 100px;
+
   border-radius: 50px;
 }
 #quote-text{
@@ -53,4 +63,12 @@ body{
   height: 40px;
   width: 100px;
   border-radius: 500px;
+}
+#saved-quotes-row{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 250px;
+  margin-left: 5%;
+  margin-top: 30px;
 }
