@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import QuoteChanger from './QuoteChanger.js';
 import SaveQuote from './SaveQuote.js';
 import changeColor from './Services/UtilityFunction';
+import QuoteCard from './QuoteCard';
 
-console.log(changeColor)
 
 
 
@@ -18,11 +17,12 @@ class App extends Component {
       quote: this.quote,
       author: this.author,
       category: this.category,
-      primaryColor: "#3a82f4"
+      primaryColor: "#3a82f4",
+      flexArray: []
     }
     this.handleClickNewQuote  = this.handleClickNewQuote.bind(this);
-    // this.handleClickTweet = this.handleClickTweet.bind(this);
-    // this.handleClickSave = this.handleClickSave.bind(this);
+    this.handleClickDelete = this.handleClickDelete.bind(this);
+    this.handleClickSave = this.handleClickSave.bind(this);
   }
 
   //Fires when app is loaded~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,8 +44,6 @@ class App extends Component {
              }).catch(console.log)
     .then(
     () => {
-      // document.getElementsByClassName('button-color').style.backgroundColor=changeColor();
-      // document.body.style.backgroundColor = changeColor();
       this.setState({ primaryColor: changeColor() })
     })
   }
@@ -66,17 +64,20 @@ class App extends Component {
 
   //Should use onClick event to add 'this' quote to favorites flexbox on bottom of page
    handleClickSave(){
-
+      if (this.state.flexArray.length < 4){
+      this.setState({flexArray: [...this.state.flexArray, {quote: this.state.quote, author: this.state.author}] } );
+      }
   }
 
   // //Should use onClick event to remove item from favorites flexbox on bottom of page
-  //   handleClickRemove(){
-
-
-  //   }
+  handleClickDelete(quote){
+     this.setState({flexArray: this.state.flexArray.filter(cur => cur.quote !== quote)});
+    }
 
 
   render() {
+    const quotesToRender = this.state.flexArray.map(cur=><QuoteCard key={cur.quote}author={cur.author} quote={cur.quote} color={this.state.primaryColor} handleClickDelete={this.handleClickDelete} />)
+
     return (
       <div className="App" style={{backgroundColor: this.state.primaryColor}} >
         <div id="main-container">
@@ -85,7 +86,7 @@ class App extends Component {
             <div id="author-name">
             <p id="author-text">{this.state.author}</p>
               <div id="button-box">
-                <button type="button" className="button-color"  style={{backgroundColor: this.state.primaryColor}} id="save-button" onClick={this.handleClickSave}>Save</button>
+                <button type="button" className="button-color" handleClickSave={this.handleClickSave} style={{backgroundColor: this.state.primaryColor}} id="save-button" onClick={this.handleClickSave}>Save</button>
                 <button type="button" className="button-color" style={{backgroundColor: this.state.primaryColor}} id="tweet-button">Tweet</button>
                 <button type="button" className="button-color" style={{backgroundColor: this.state.primaryColor}} id="new-quote-button"  onClick={this.handleClickNewQuote}>New Quote</button>
               </div>
@@ -93,11 +94,7 @@ class App extends Component {
           </div>
         </div>
         <div id="saved-quotes-row" style={{backgroundColor: this.state.primaryColor}}>
-
-
-
-
-
+            {quotesToRender}
         </div>
       </div>
     );
