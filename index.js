@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(json());
 //Build server, use yarn build when total project is ready for implementation
-app.use(express.static("${__dirname}/public/build"));
+app.use(express.static(`${__dirname}/build`));
 
 //Get quote info from API
 
