@@ -25,7 +25,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get("http://quotes.stormconsultancy.co.uk/random.json")
+      .get("/api/getQuote")
       .then(response => {
         this.setState({
           quote: response.data.quote,
@@ -38,7 +38,7 @@ class App extends Component {
 
   handleClickNewQuote() {
     axios
-      .get("http://quotes.stormconsultancy.co.uk/random.json")
+      .get("/api/getQuote")
       .then(response => {
         this.setState({
           quote: response.data.quote,
