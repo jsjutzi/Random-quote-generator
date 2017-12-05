@@ -21,7 +21,8 @@
     "predeploy": "npm run build",
     "deploy": "npm run build&&gh-pages -d build"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "description":
+    "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
@@ -33,5 +34,5 @@
   "bugs": {
     "url": "https://github.com/jsjutzi/random-quote-generator/issues"
   },
-  "homepage": "https://jsjutzi.github.io/random-quote-generator#readme"
+  "homepage": "https://jsjutzi.github.io/random-quote-generator"
 }
