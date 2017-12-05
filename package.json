@@ -16,19 +16,22 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "npm run build&&gh-pages -d build"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "description":
+    "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsjutzi/Random-quote-generator.git"
+    "url": "git+https://github.com/jsjutzi/random-quote-generator.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jsjutzi/Random-quote-generator/issues"
+    "url": "https://github.com/jsjutzi/random-quote-generator/issues"
   },
-  "homepage": "https://github.com/jsjutzi/Random-quote-generator#readme"
+  "homepage": "https://jsjutzi.github.io/random-quote-generator#readme"
 }
