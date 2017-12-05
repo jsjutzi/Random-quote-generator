@@ -85,13 +85,21 @@ body{
   font-size: 1.1em;
 }
 .saved-quotes-author{
-  margin-top: 10px;
   margin-left: 170px;
 }
 #delete-quote{
   margin-top: 10px;
-  margin-left: 270px;
-  margin-right: 5%;
+  margin-left: 250px;
   border-radius: 100%;
   color: white;
+}
+#easterEgg{
+  margin-left: 1100px;
+  background:transparent;
+  border:none;
+  outline:none;
+  display:block;
+  height:10px;
+  width:30px;
+  cursor:pointer;
 }

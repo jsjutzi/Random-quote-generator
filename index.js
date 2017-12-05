@@ -19,7 +19,9 @@ app.get('/api/getQuote', function(req, res){
         return res.send(response.data)
     }).catch(console.log)
 })
-
+// app.post('/api/postQuote', function(req,res){
+//     axios.post('https://api.twitter.com/1.1/statuses/update.json?status=Maybe%20he%27ll%20finally%20find%20his%20keys.%20%23peterfalk', querystring.stringify({quote: this.state.quote, author: this.state.author})).catch(console.log)
+// }
 
 
 
